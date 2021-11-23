@@ -1,4 +1,4 @@
-const Account = require('./account');
+const Account = require('../account');
 
 let balance;
 let account;
