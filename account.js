@@ -8,7 +8,12 @@ class Account {
   }
 
   withdraw(amount){ 
-    this.balance -= amount;
+    if (!(this.balance <= 0)) {
+      this.balance -= amount;
+    }
+    else {
+      throw 'Not enough money in your balance !'
+    }
   }
 }
 module.exports = Account;
