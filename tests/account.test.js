@@ -1,15 +1,14 @@
 const Account = require('../account');
 
-let balance;
-let account;
-
 describe('account', () => {
+
+  let account;
+
   beforeEach(() => {
-    balance = 200;
-    account = new Account(balance);
- })
- 
-  it('has a balance', () => {
-    expect(account.balance).toBeTruthy();
+    account = new Account();
+  })
+
+  it('has a balance of zero when created', () => {
+    expect(account.balance).toBe(0);
   })
 })
