@@ -2,6 +2,9 @@
 
 ## User Stories : 
 ```````
+I want to have an account with a balance
+```````
+```````
 I want to be able to make a deposit on my account
 ```````
 ```````
