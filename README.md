@@ -1,5 +1,27 @@
 # bank-tech-test
 
+
+You can run this app by cloning this repo :
+
+`````
+git clone https://github.com/Alex969/bank-tech-test.git
+`````
+
+Then run :
+
+``````
+npm install
+``````
+
+You can then either run the code in node or the Javascript browser console.
+
+To run tests :
+
+````
+npm run test
+````
+
+
 ## User Stories : 
 ```````
 I want to have an account with a balance
