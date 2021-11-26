@@ -4,10 +4,7 @@ describe('account', () => {
 
   let account;
   let starterBalance;
-  let depositAmount;
-  let withdrawalAmount;
   let upBalance;
-  let currentBalance;
   let downBalance;
 
   beforeEach(() => {
@@ -16,35 +13,29 @@ describe('account', () => {
   })
   describe('balance', () => {
     it('has a balance of zero when created', () => {
-      currentBalance = account.balance;
-      expect(currentBalance).toBe(starterBalance);
+      expect(account.balance).toBe(starterBalance);
     })
   })
   
   describe('deposit', () => {
     it('adds money to your balance when you make a deposit', () => {
-      currentBalance = account.balance;
-      depositAmount = 100
-      account.deposit(depositAmount);
-      upBalance = currentBalance + depositAmount;
+      upBalance = account.balance + 100;
+      account.deposit("24/11/2021", 100);
       expect(account.balance).toBe(upBalance);
     })
   })
 
   describe('withdraw', () => {
     it('cannot withdraw money if balance is of 0', () => {
-      currentBalance = account.balance;
-      withdrawalAmount = 100;
       expect(() => { 
-        account.withdraw(withdrawalAmount); 
+        account.withdraw("24/11/2021", 100); 
       }).toThrow("Not enough money in your balance !");
     })
 
     it('withdraws money from your account', () => {
       account.balance = 90;
-      withdrawalAmount = 50;
-      downBalance = account.balance - withdrawalAmount;
-      account.withdraw(withdrawalAmount);
+      downBalance = account.balance - 50;
+      account.withdraw("24/11/2021", 50);
       expect(account.balance).toBe(downBalance);
 
     })

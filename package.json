@@ -2,7 +2,7 @@
   "name": "bank-tech-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "account.js",
   "scripts": {
     "test": "jest --coverage"
   },
@@ -30,6 +30,7 @@
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "chokidar": "^3.5.2",
-    "fsevents": "^2.3.2"
+    "fsevents": "^2.3.2",
+    "string-table": "^0.1.5"
   }
 }

@@ -1,15 +1,20 @@
+const operations = require("./operations");
+
 class Account {
   constructor(){
     this.balance = 0;
   }
 
-  deposit(amount){ 
+  deposit(date, amount){ 
     this.balance += amount;
+    operations.push(`date: ${date}`,`credit: ${amount}`)
+    
   }
 
-  withdraw(amount){ 
+  withdraw(date,amount){ 
     if (!(this.balance <= 0)) {
       this.balance -= amount;
+      operations.push(`date: ${date}`,`debit: ${amount}`)
     }
     else {
       throw 'Not enough money in your balance !'
